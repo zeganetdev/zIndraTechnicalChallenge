@@ -18,6 +18,7 @@ Pasos para iniciar el proyecto
   }
 ```
 
+- El archivo Postman se encuentra en la raiz con el nombre `zIndraTechnicalChallenge.postman_collection.json`
 
 ## Authors
 
