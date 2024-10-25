@@ -322,6 +322,67 @@
 							"body": null
 						}
 					]
+				},
+				{
+					"name": "/{productId}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_zIndraTechnicalChallenge}}/api/product/3861e3ca-bd60-4c4c-ad64-08dcf509db1a",
+							"host": [
+								"{{url_zIndraTechnicalChallenge}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"3861e3ca-bd60-4c4c-ad64-08dcf509db1a"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Obtiene producto",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url_zIndraTechnicalChallenge}}/api/product/3861e3ca-bd60-4c4c-ad64-08dcf509db1a",
+									"host": [
+										"{{url_zIndraTechnicalChallenge}}"
+									],
+									"path": [
+										"api",
+										"product",
+										"3861e3ca-bd60-4c4c-ad64-08dcf509db1a"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Oct 2024 16:32:35 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"3861e3ca-bd60-4c4c-ad64-08dcf509db1a\",\n    \"name\": \"Turron Doña Pepa\",\n    \"price\": 10,\n    \"description\": \"El turrón de Doña Pepa es un dulce tradicional peruano relacionado con la festividad del Señor de los Milagros\",\n    \"stock\": 22\n}"
+						}
+					]
 				}
 			]
 		}
