@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Serilog.Extensions.Logging.File" Version="2.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\zIndraTechnicalChallenge.Application.MainContext\zIndraTechnicalChallenge.Application.MainContext.csproj" />
+    <ProjectReference Include="..\zIndraTechnicalChallenge.Infrastructure.CrossCutting\zIndraTechnicalChallenge.Infrastructure.CrossCutting.csproj" />
+    <ProjectReference Include="..\zIndraTechnicalChallenge.Infrastructure.Data\zIndraTechnicalChallenge.Infrastructure.Data.csproj" />
+    <ProjectReference Include="..\zIndraTechnicalChallenge.Service.Rest.Dto\zIndraTechnicalChallenge.Service.Rest.Dto.csproj" />
+  </ItemGroup>
+
+</Project>

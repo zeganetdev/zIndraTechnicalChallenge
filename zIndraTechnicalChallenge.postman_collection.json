@@ -1,0 +1,329 @@
+{
+	"info": {
+		"_postman_id": "2e8c4e70-adc8-4915-a318-b84699c3dd8f",
+		"name": "zIndraTechnicalChallenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10341348"
+	},
+	"item": [
+		{
+			"name": "api/product",
+			"item": [
+				{
+					"name": "/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_zIndraTechnicalChallenge}}/api/product?name=&stockMin=0&stockMax=0&pageIndex=0&pageCount=10",
+							"host": [
+								"{{url_zIndraTechnicalChallenge}}"
+							],
+							"path": [
+								"api",
+								"product"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "stockMin",
+									"value": "0"
+								},
+								{
+									"key": "stockMax",
+									"value": "0"
+								},
+								{
+									"key": "pageIndex",
+									"value": "0"
+								},
+								{
+									"key": "pageCount",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Producto listado",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url_zIndraTechnicalChallenge}}/api/product?name=&stockMin=0&stockMax=0&pageIndex=0&pageCount=10",
+									"host": [
+										"{{url_zIndraTechnicalChallenge}}"
+									],
+									"path": [
+										"api",
+										"product"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": ""
+										},
+										{
+											"key": "stockMin",
+											"value": "0"
+										},
+										{
+											"key": "stockMax",
+											"value": "0"
+										},
+										{
+											"key": "pageIndex",
+											"value": "0"
+										},
+										{
+											"key": "pageCount",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Oct 2024 15:46:15 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"3861e3ca-bd60-4c4c-ad64-08dcf509db1a\",\n            \"name\": \"Turron Doña Pepa\",\n            \"price\": 14.5,\n            \"description\": \"El turrón de Doña Pepa es un dulce tradicional peruano relacionado con la festividad del Señor de los Milagros\",\n            \"stock\": 100,\n            \"registerDate\": \"2024-10-25T10:29:45.9480542\"\n        }\n    ],\n    \"totalRows\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Turron Doña Pepa\",\r\n  \"price\": 14.50,\r\n  \"description\": \"El turrón de Doña Pepa es un dulce tradicional peruano relacionado con la festividad del Señor de los Milagros\",\r\n  \"stock\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_zIndraTechnicalChallenge}}/api/product",
+							"host": [
+								"{{url_zIndraTechnicalChallenge}}"
+							],
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Producto creado",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Turron Doña Pepa\",\r\n  \"price\": 14.50,\r\n  \"description\": \"El turrón de Doña Pepa es un dulce tradicional peruano relacionado con la festividad del Señor de los Milagros\",\r\n  \"stock\": 100\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_zIndraTechnicalChallenge}}/api/product",
+									"host": [
+										"{{url_zIndraTechnicalChallenge}}"
+									],
+									"path": [
+										"api",
+										"product"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Oct 2024 15:46:56 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"d0a3f960-7fe2-4232-67a3-08dcf50c4137\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"3861e3ca-bd60-4c4c-ad64-08dcf509db1a\",\r\n    \"name\": \"Turron Doña Pepa\",\r\n    \"price\": 10,\r\n    \"description\": \"El turrón de Doña Pepa es un dulce tradicional peruano relacionado con la festividad del Señor de los Milagros\",\r\n    \"stock\": 22\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_zIndraTechnicalChallenge}}/api/product",
+							"host": [
+								"{{url_zIndraTechnicalChallenge}}"
+							],
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Producto actualizado",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"3861e3ca-bd60-4c4c-ad64-08dcf509db1a\",\r\n    \"name\": \"Turron Doña Pepa\",\r\n    \"price\": 10,\r\n    \"description\": \"El turrón de Doña Pepa es un dulce tradicional peruano relacionado con la festividad del Señor de los Milagros\",\r\n    \"stock\": 22\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url_zIndraTechnicalChallenge}}/api/product",
+									"host": [
+										"{{url_zIndraTechnicalChallenge}}"
+									],
+									"path": [
+										"api",
+										"product"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Oct 2024 15:48:39 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"3861e3ca-bd60-4c4c-ad64-08dcf509db1a\"\n}"
+						}
+					]
+				},
+				{
+					"name": "/{productId}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url_zIndraTechnicalChallenge}}/api/product/ea39d538-33bd-4d0d-3987-08dcf504db49",
+							"host": [
+								"{{url_zIndraTechnicalChallenge}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"ea39d538-33bd-4d0d-3987-08dcf504db49"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Producto eliminado",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url_zIndraTechnicalChallenge}}/api/product/0974290b-2bdd-4d54-2674-08dcf5045bcb",
+									"host": [
+										"{{url_zIndraTechnicalChallenge}}"
+									],
+									"path": [
+										"api",
+										"product",
+										"0974290b-2bdd-4d54-2674-08dcf5045bcb"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Oct 2024 15:10:02 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	]
+}
